@@ -1,6 +1,6 @@
 {
   "name": "trpc-webrtc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A set of TRPC adapters for communication via RTCDataChannel in the browser",
   "type": "module",
   "main": "dist/index.js",
