@@ -8,7 +8,7 @@ A set of [tRPC](https://trpc.io/) adapters to enable type-safe communication via
 
 ## Installation
 
-```
+```shell
 # Using pnpm
 pnpm add trpc-webrtc
 
@@ -23,14 +23,14 @@ npm install --save trpc-webrtc
 
 1. Initialize [tRPC](https://trpc.io/), with `allowOutsideOfServer: true`:
 
-```
+```ts
 import { initTRPC } from "@trpc/server";
 const t = initTRPC.create({ allowOutsideOfServer: true });
 ```
 
 2. Create a router, [as usual](https://trpc.io/docs/quickstart):
 
-```
+```ts
 const appRouter = t.router({
   testQuery: t.procedure.query(() => ({ hello: "world" })),
 });
@@ -39,8 +39,8 @@ type AppRouter = typeof appRouter;
 
 3. Invoke `applyDataChannelHandler` on an [`RTCDataChannel`](https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel) (`rx`) to act as the server:
 
-```
-import { applyDataChannelHandler } from "trpc-webrtc"
+```ts
+import { applyDataChannelHandler } from "trpc-webrtc";
 const handler = applyDataChannelHandler({
   dataChannel: rx,
   router: appRouter,
@@ -49,9 +49,9 @@ const handler = applyDataChannelHandler({
 
 4. Create a client, using `dataChannelLink` with an [`RTCDataChannel`](https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel) (`tx`):
 
-```
+```ts
 import { createTRPCProxyClient } from "@trpc/client";
-import { createDataChannelClient, dataChannelLink } from "trpc-webrtc"
+import { createDataChannelClient, dataChannelLink } from "trpc-webrtc";
 
 const client = createTRPCProxyClient<AppRouter>({
   links: [
