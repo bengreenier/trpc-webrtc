@@ -1,5 +1,7 @@
 # trpc-webrtc
 
+[![CI](https://github.com/bengreenier/trpc-webrtc/actions/workflows/ci.yml/badge.svg)](https://github.com/bengreenier/trpc-webrtc/actions/workflows/ci.yml)
+
 A set of [tRPC](https://trpc.io/) adapters to enable type-safe communication via [`RTCDataChannel`](https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel) in the browser.
 
 - Compatible with tRPC `>=10.20.0`.
