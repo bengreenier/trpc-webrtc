@@ -1,0 +1,47 @@
+{
+  "name": "trpc-webrtc",
+  "version": "0.1.2",
+  "description": "A set of TRPC adapters for communication via RTCDataChannel in the browser",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "wtr",
+    "build": "tsc -p tsconfig.lib.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bengreenier/trpc-webrtc.git"
+  },
+  "keywords": [
+    "trpc",
+    "webrtc",
+    "RTCDataChannel"
+  ],
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bengreenier/trpc-webrtc/issues"
+  },
+  "homepage": "https://github.com/bengreenier/trpc-webrtc#readme",
+  "peerDependencies": {
+    "@trpc/client": ">=10.20.0",
+    "@trpc/server": ">=10.20.0"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@trpc/client": "^10.20.0",
+    "@trpc/server": "^10.20.0",
+    "@tsconfig/esm": "^1.0.2",
+    "@tsconfig/recommended": "^1.0.2",
+    "@web/dev-server-esbuild": "^0.3.6",
+    "@web/test-runner": "^0.15.3",
+    "@web/test-runner-puppeteer": "^0.12.1",
+    "emittery": "^1.0.1",
+    "typescript": "^5.0.4",
+    "zod": "^3.21.4"
+  }
+}
